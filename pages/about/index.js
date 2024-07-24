@@ -94,7 +94,7 @@ const About = () => {
   };
 
   const handleKeyDown = (event, itemIndex) => {
-    if (event.key === 'Enter' || event.key === ' ') {
+    if (event.key === "Enter" || event.key === " ") {
       setIndex(itemIndex);
     }
   };
@@ -132,8 +132,9 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            For more than 2 years, I began my journey as a web developer. Since then,
-            I&apos;ve worked on numerous projects and collaborated on digital products for both business and consumer use.
+            For more than 2 years, I began my journey as a web developer. Since
+            then, I&apos;ve worked on numerous projects and collaborated on
+            digital products for both business and consumer use.
           </motion.p>
           {/* Counters */}
           <motion.div
@@ -172,24 +173,22 @@ const About = () => {
           exit="hidden"
           className="flex flex-col flex-1 xl:max-w-[48%] h-[480px]"
         >
-        <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
-  {aboutData.map((item, itemIndex) => (
-    <button
-      key={item.id}
-      className={`${
-        index === itemIndex &&
-        "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-      } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
-      onClick={() => handleClick(itemIndex)}
-      onKeyDown={(e) => handleKeyDown(e, itemIndex)}
-      aria-pressed={index === itemIndex ? 'true' : 'false'}
-    >
-      {item.title}
-    </button>
-  ))}
-</div>
-
-
+          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+            {aboutData.map((item, itemIndex) => (
+              <button
+                key={item.id}
+                className={`${
+                  index === itemIndex &&
+                  "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
+                } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                onClick={() => handleClick(itemIndex)}
+                onKeyDown={(e) => handleKeyDown(e, itemIndex)}
+                aria-pressed={index === itemIndex ? "true" : "false"}
+              >
+                {item.title}
+              </button>
+            ))}
+          </div>
           <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item) => (
               <div
@@ -204,7 +203,10 @@ const About = () => {
                 {/* Icons */}
                 <div className="flex gap-x-4">
                   {item.icons?.map((icon, iconIndex) => (
-                    <div key={iconIndex} className="text-2xl transition-all duration-500">
+                    <div
+                      key={item.id}
+                      className="text-2xl transition-all duration-500"
+                    >
                       {icon}
                     </div>
                   ))}

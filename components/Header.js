@@ -14,10 +14,11 @@ const Header = () => {
           {/* logo */}
           <Link href={"/"}>
             <Image
+            className="max-sm:hidden"
               src={"/YassineLogoFive.svg"}
               width={220}
               height={48}
-              alt=''
+              alt='YassineLogoFive'
               priority={true}
             />
           </Link>
