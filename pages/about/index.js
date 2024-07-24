@@ -76,7 +76,6 @@ const aboutData = [
 ];
 
 // component
-import Avatar from "../../components/avatar";
 
 // frame
 import { motion } from "framer-motion";
@@ -85,6 +84,7 @@ import { fadeIn } from "../../variants";
 // counters
 import Countup from "react-countup";
 import Circles from "../../components/Circles";
+import Avatar from "../../components/Avatar";
 
 const About = () => {
   const [index, setIndex] = useState(0);
