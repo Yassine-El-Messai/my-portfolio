@@ -8,7 +8,7 @@ const Bulb = () => {
         height={260}
         width={200}
         className="w-full h-width"
-        alt=""
+        alt="bulb"
       />
     </div>
   );

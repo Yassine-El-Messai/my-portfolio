@@ -9,7 +9,7 @@ const Avatar = () => {
         src={"/avatarTow.png"}
         width={737}
         height={678}
-        alt=''
+        alt='avatarTow'
         className='translate-z-0 w-full h-full'
       />
     </div>

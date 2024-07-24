@@ -1,6 +1,7 @@
 // testimonial data
 const testimonialData = [
-  {
+  { 
+    id : "1",
     image: "/t-avt-1.png",
     name: "Anne Smith",
     position: "Customer",
@@ -8,6 +9,7 @@ const testimonialData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
   },
   {
+    id : "2",
     image: "/t-avt-2.png",
     name: "Jane Doe",
     position: "Customer",
@@ -15,6 +17,7 @@ const testimonialData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
   },
   {
+    id : "3",
     image: "/t-avt-3.png",
     name: "Jhon Doe",
     position: "Customer",
@@ -52,16 +55,16 @@ const TestimonialSlider = () => {
       modules={[Navigation, Pagination]}
       className="h-[400px]"
     >
-      {testimonialData.map((person, index) => {
+      {testimonialData.map((person) => {
         return (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={person.id}>
             <div className="flex flex-col items-center md:flex-row gap-x-8 h-full px-16 ">
               {/* avatar, name , postion */}
               <div className="w-full max-w-[300px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0">
                 <div className="flex flex-col justify-center text-center">
                   {/* avatar  */}
                   <div className="mb-2 mx-auto">
-                    <Image src={person.image} width={100} height={100} alt="" />
+                    <Image src={person.image} width={100} height={100} alt="person" />
                   </div>
                   {/* name */}
                   <div className="text-lg">{person.name} </div>
