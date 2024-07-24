@@ -31,7 +31,7 @@ const Services = () => {
               Welcome! I specialize in creating responsive, visually appealing,
               and user-friendly websites. From sleek designs to smooth user
               experiences, I bring your ideas to life with cutting-edge
-              front-end technologies. Let's build something great together.
+              front-end technologies. Let&apos;s build something great together.
             </motion.p>
           </div>
           <motion.div

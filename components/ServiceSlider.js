@@ -9,34 +9,35 @@ import "swiper/css/pagination";
 
 // icons
 import {
-  RxCrop,
+   
   RxPencil2,
   RxDesktop,
-  RxReader,
-  RxRocket,
-  RxArrowBottomRight,
-  RxArrowTopRight,
+   RxRocket,
+   RxArrowTopRight,
 } from "react-icons/rx";
 
 // impoert required moduls
 import { FreeMode, Pagination } from "swiper";
 
 // data
+ 
 const serviceData = [
   {
+    id: 1,
     icon: <RxPencil2 />,
     title: "Design",
     description:
       "Creating visually stunning designs that captivate your audience and enhance user experience.",
   },
   {
+    id: 2,
     icon: <RxDesktop />,
     title: "Development",
     description:
-      "Crafting responsive and dynamic websites that bring your vision to life with the latest front-end technologies..",
+      "Crafting responsive and dynamic websites that bring your vision to life with the latest front-end technologies.",
   },
-
   {
+    id: 3,
     icon: <RxRocket />,
     title: "SEO",
     description:
@@ -44,6 +45,7 @@ const serviceData = [
   },
 ];
 
+ 
 const ServiceSlider = () => {
   return (
     <Swiper
@@ -64,9 +66,9 @@ const ServiceSlider = () => {
       modules={[FreeMode, Pagination]}
       className='h-[240px] sm:h-[340px]'
     >
-      {serviceData.map((item, index) => {
+      {serviceData.map((item) => {
         return (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={item.id}>
             <div className='bg-[rgba(65,47,123,0.15)] min-h-[300px] rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300 '>
               {/* icons */}
               <div className='text-4x1 text-accent mb-4'> {item.icon} </div>
